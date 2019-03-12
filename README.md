@@ -1,0 +1,1 @@
+stopped at marty's commit: wire signout button to call firebase auth signout

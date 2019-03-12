@@ -44,6 +44,11 @@ export default function loadHeader(options) {
         if(user) {
             //there is a user
             const userDom = makeProfile(user);
+            //reference elements before appending dom
+            const signOutButton = userDom.querySelector('button');
+            signOutButton.addEventListener('click', () => {
+                auth.signOut();
+            });
             header.appendChild(userDom);
         }
         else {

@@ -1,7 +1,9 @@
 import { auth } from './firebase.js';
 import loadHeader from './header-component.js';
 
-loadHeader({ skipAuth: true });
+// loadHeader({ skipAuth: true });
+const options = { skipAuth: true };
+loadHeader(options);
 
 const ui = new firebaseui.auth.AuthUI(auth);
 
